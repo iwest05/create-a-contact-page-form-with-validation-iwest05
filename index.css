@@ -1,0 +1,109 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #0b0f19;
+    color: rgba(255,255,255,.9);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 96px 16px 64px;
+}
+
+.container {
+    width: 100%;
+    max-width: 780px;
+}
+
+.card {
+    width: 100%;
+    border-radius: 22px;
+    padding: clamp(18px, 3vw, 36px);
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.form {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+}
+
+.field {
+    display: grid;
+    gap: 6px;
+}
+
+.field label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.field input,
+.field textarea {
+    font-size: 1.05rem;
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 12px;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    outline: none;
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: rgba(255, 255, 255, 0.32);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 11px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #efefef;
+    background: #b15a2a;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.btn:hover {
+    filter: brightness(1.06);
+}
+
+.status {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.field-error {
+    margin: 0;
+    font-size: 0.95rem;
+    min-height: 1.1em;
+    opacity: 0.95;
+}
+
+.is-invalid {
+    border-color: rgba(255, 90, 90, 0.75) !important;
+    box-shadow: 0 0 0 3px rgba(255, 90, 90, 0.18) !important;
+}
